@@ -1,0 +1,20 @@
+import Vue from 'vue';
+import Router from 'vue-router';
+import Gallery from './gallery.vue';
+import Menu from './menu.vue';
+import About from './about.vue';
+import Home from './app'
+
+Vue.use(Router)
+  export default new Router({
+    routes: [
+      {path: '/', component: Home},
+      {
+        path: '/gallery',
+        name: 'Gallery',
+        component: Gallery,
+        props: true
+        },
+      {path: '/menu', component: Menu},
+      {path: '/about', component: About}
+  ]})
