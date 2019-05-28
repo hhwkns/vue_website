@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-<!-- Testing image prop -->
-    <gallery-page v-bind="src"></gallery-page>
-  <div class="gallery" v-for="image in gallery">
-      <img class="img" v-bind:src="src" v-bind:alt="alt" v-bind:title="title">
-  </div>
 
 <!-- trying to build as a single page app but the router links aren't loading properly -->
     <div class="top">
@@ -14,6 +9,12 @@
       <router-link class="links" to="/menu">Menu</router-link>
       <router-link class="links" to="/about">About</router-link>
   </div>
+  <!-- Testing image prop -->
+      <gallery-page v-bind="src"></gallery-page>
+    <div class="gallery" v-for="image in gallery">
+        <img class="img" v-bind:src="src" v-bind:alt="alt" v-bind:title="title">
+    </div>
+
     <div class="background"><h1>Comida Oaxacana</h1></div>
 <!-- footer as slot -->
     <app-footer></app-footer>
